@@ -1,0 +1,28 @@
+.weather {
+  width: 100%;
+  background-color: #ecececa4;
+  margin: 1rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  color: #333;
+  .icon-container {
+    img {
+      width: 200px;
+    }
+  }
+  .current-temp {
+    font-size: 4rem;
+    .celsius {
+      font-size: 2rem;
+      color: #444;
+    }
+  }
+  .min-max-temp {
+    display: flex;
+    gap: 0.5rem;
+  }
+}

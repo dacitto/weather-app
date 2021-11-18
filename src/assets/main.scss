@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --card-background: #eeeeee66;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  //background-image: url(./img/background1.jpg);
+  background-color: #367de0;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 95%;
+  max-width: 680px;
+  margin: 0 auto;
+}

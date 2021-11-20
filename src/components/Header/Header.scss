@@ -1,11 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 .header {
   width: 100%;
   background-color: #ecececa4;
-  padding: 4rem 0;
+  padding-top: 1rem 0;
+  padding-bottom: 3rem;
+
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    black 10%,
+    rgba(10, 10, 10, 0.787) 35%,
+    rgba(10, 10, 10, 0.05) 95%,
+    rgba(10, 10, 10, 0) 99%
+  );
   //   display: flex;
   //   align-items: center;
   //   justify-content: center;
   //   flex-direction: column;
+  .title {
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    color: #fefefe;
+    font-family: "Pacifico", cursive;
+  }
   .search-bar {
     padding: 0.7rem 1rem;
     border: none;

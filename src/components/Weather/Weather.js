@@ -39,6 +39,7 @@ const Weather = ({ datas }) => {
           </div>
         </div>
       </div>
+      <Map lon={datas.coord.lon} lat={datas.coord.lat} city={datas.name} />
 
       {data && <CardsContainer data={data}></CardsContainer>}
     </div>

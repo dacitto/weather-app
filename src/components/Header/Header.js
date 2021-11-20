@@ -4,6 +4,7 @@ const Header = ({ setCity, city }) => {
   return (
     <header className="header">
       <div className="container">
+        <h1 className="title">weatherly</h1>
         <input
           type="text"
           className="search-bar"

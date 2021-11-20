@@ -10,11 +10,11 @@ const fetchWeather = async (key) => {
   return res.json();
 };
 
-console.log("geo");
 console.log(navigator.geolocation);
 function App() {
   const [city, setCity] = useState("djelfa");
   const { data, status } = useQuery(["city", city], fetchWeather);
+  console.log(data);
   return (
     <div>
       <Header setCity={setCity} city={city}></Header>

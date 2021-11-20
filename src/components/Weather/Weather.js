@@ -18,8 +18,10 @@ const Weather = ({ datas }) => {
     <div className="container">
       <div className="weather">
         <div className="col">
-          <h1 className="city">{datas.name}</h1>
-          <h2>{datas.weather[0].main}</h2>
+          <h2 className="city-name">
+            {datas.name}, <span className="country">{datas.sys.country}</span>
+          </h2>
+          <h1 className="city-weather">{datas.weather[0].main}</h1>
         </div>
         <div className="col">
           <div className="icon-container">
@@ -33,9 +35,22 @@ const Weather = ({ datas }) => {
           <h1 className="current-temp">
             {Math.round(datas.main.temp)}°<span className="celsius">C</span>
           </h1>
-          <div className="min-max-temp">
-            <span>Min {Math.round(datas.main.temp_min)}</span>/
-            <span>Max {Math.round(datas.main.temp_max)}</span>
+          <h3 className="feels-like">
+            Feels like {Math.round(datas.main.feels_like)}°
+            <span className="celsius">C</span>
+          </h3>
+        </div>
+        <div className="stat-row">
+          <div className="status">
+            <span className="text">Humidity</span> {datas.main.humidity}%
+          </div>
+
+          <div className="status">
+            <span className="text">wind speed</span> {datas.wind.speed}km
+          </div>
+
+          <div className="status">
+            <span className="text">visibility</span> {datas.visibility / 1000}km
           </div>
         </div>
       </div>

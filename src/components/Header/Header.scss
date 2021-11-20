@@ -14,10 +14,7 @@
     rgba(10, 10, 10, 0.05) 95%,
     rgba(10, 10, 10, 0) 99%
   );
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   flex-direction: column;
+
   .title {
     text-transform: capitalize;
     text-align: center;
@@ -25,8 +22,10 @@
     padding-bottom: 1rem;
     color: #fefefe;
     font-family: "Pacifico", cursive;
+    font-size: 3rem;
   }
   .search-bar {
+    font-size: 1.5rem;
     padding: 0.7rem 1rem;
     border: none;
     width: 100%;

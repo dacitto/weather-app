@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Weather from "./components/Weather/Weather";
+
 const fetchWeather = async (key) => {
   const city = key.queryKey[1];
   const res = await fetch(
@@ -9,24 +10,6 @@ const fetchWeather = async (key) => {
   );
   return res.json();
 };
-
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
-};
-
-function success(pos) {
-  var crd = pos.coords;
-
-  console.log("Your current position is:");
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-}
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
 
 function App() {
   const [city, setCity] = useState("");
@@ -43,8 +26,19 @@ function App() {
         })
         .catch((error) => setCity(""));
     };
-    navigator.geolocation.getCurrentPosition(getGpsLocation, error, options);
+    navigator.geolocation.getCurrentPosition(
+      getGpsLocation,
+      (err) => {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0,
+      }
+    );
   }, []);
+
   return (
     <div>
       <Header setCity={setCity} city={city}></Header>

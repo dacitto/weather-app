@@ -3,7 +3,7 @@ import "./Weather.scss";
 import { useQuery } from "react-query";
 import CardsContainer from "../CardsContainer/CardsContainer";
 import Map from "../Map/Map";
-//import weather from "../../../public/weather";
+
 const fetchWeathers = async (key) => {
   const city = key.queryKey[1];
   const res = await fetch(

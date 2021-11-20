@@ -25,10 +25,27 @@
     font-size: 3rem;
   }
   .search-bar {
-    font-size: 1.5rem;
+    background-color: white;
     padding: 0.7rem 1rem;
+    display: flex;
     border: none;
     width: 100%;
     border-radius: 10px;
+    &:focus {
+      box-shadow: 0 0 0 10px #eee;
+    }
+
+    .search-input {
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+    .icon {
+      font-size: 1.7rem;
+      color: #555;
+    }
   }
 }

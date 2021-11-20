@@ -1,6 +1,7 @@
 import React from "react";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "./Map.scss";
 const Map = ({ lon, lat, city }) => {
   return (
     <div className="map">
@@ -8,7 +9,7 @@ const Map = ({ lon, lat, city }) => {
         center={[lat, lon]}
         zoom={13}
         scrollWheelZoom={false}
-        style={{ height: "500px" }}
+        className="map-container"
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

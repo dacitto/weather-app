@@ -3,6 +3,7 @@ import "./Weather.scss";
 import { useQuery } from "react-query";
 import CardsContainer from "../CardsContainer/CardsContainer";
 import Map from "../Map/Map";
+import Loading from "../Loading";
 
 const fetchWeathers = async (key) => {
   const city = key.queryKey[1];
@@ -55,7 +56,7 @@ const Weather = ({ datas }) => {
         </div>
       </div>
       <Map lon={datas.coord.lon} lat={datas.coord.lat} city={datas.name} />
-
+      {status === "loading" && <Loading />}
       {data && <CardsContainer data={data}></CardsContainer>}
     </div>
   );

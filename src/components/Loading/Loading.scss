@@ -1,0 +1,23 @@
+.loading {
+  text-align: center;
+  padding-top: 5rem;
+  color: #fefefe;
+  font-family: "Pacifico", cursive;
+  font-size: 4rem;
+  animation: 3s ease-in-out 0s infinite beat;
+}
+
+@keyframes beat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px white;
+  }
+  30%,
+  80% {
+    color: #fff;
+    text-shadow: 0 0 0² white;
+    transform: scale(0.92);
+  }
+}

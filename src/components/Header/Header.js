@@ -9,7 +9,7 @@ const Header = ({ setCity, city }) => {
         <div className="search-bar">
           <input
             type="text"
-            placeholder="type a city name"
+            placeholder="Type city name here "
             className="search-input"
             value={city}
             onChange={(e) => {

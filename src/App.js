@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Weather from "./components/Weather/Weather";
 const fetchWeather = async (key) => {
@@ -10,11 +10,41 @@ const fetchWeather = async (key) => {
   return res.json();
 };
 
-console.log(navigator.geolocation);
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log("Your current position is:");
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
 function App() {
-  const [city, setCity] = useState("djelfa");
+  const [city, setCity] = useState("");
   const { data, status } = useQuery(["city", city], fetchWeather);
-  console.log(data);
+  useEffect(() => {
+    const getGpsLocation = async (data) => {
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${data.coords.latitude}&lon=${data.coords.longitude}&appid=${process.env.REACT_APP_API_KEY}`
+      );
+      res
+        .json()
+        .then((data) => {
+          setCity(data["name"]);
+        })
+        .catch((error) => setCity(""));
+    };
+    navigator.geolocation.getCurrentPosition(getGpsLocation, error, options);
+  }, []);
   return (
     <div>
       <Header setCity={setCity} city={city}></Header>

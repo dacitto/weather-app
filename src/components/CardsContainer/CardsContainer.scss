@@ -3,21 +3,33 @@
   width: fit-content;
   list-style: none;
   gap: 0.4rem;
-  justify-content: space-between;
+  //justify-content: space-between;
+  width: 100%;
+  perspective: 10px;
+  flex-wrap: wrap;
   .daytime {
-    background-color: var(--card-background);
     padding: 0.4rem 0.3rem;
     border-radius: 5px;
-    transition: 0.3s all;
-    opacity: 0.8;
+    transition: 0.1s all ease-in-out;
+    display: flex;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border-radius: 10px;
+
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     &:hover {
       cursor: pointer;
     }
     &.active {
-      opacity: 1;
-      margin: 0 0.5rem;
-      font-weight: bold;
-      transform: scale(1.1);
+      color: var(--text-color);
+      font-weight: 500;
+      backdrop-filter: blur(25px) saturate(200%);
+      -webkit-backdrop-filter: blur(25px) saturate(200%);
+      background-color: rgba(17, 25, 40, 0.68);
+      border: 1px solid rgba(255, 255, 255, 0.125);
     }
   }
 }

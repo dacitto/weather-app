@@ -24,8 +24,9 @@ const Header = ({ setCity, city }) => {
           <button
             className="btn"
             onClick={() => {
-              setCity(search);
+              if (search !== "") setCity(search);
             }}
+            disabled={search === "" ? "disabled" : null}
           >
             Search
           </button>

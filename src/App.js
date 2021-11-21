@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Weather from "./components/Weather/Weather";
 import Loading from "./components/Loading";
 import Footer from "./components/Footer/Footer";
+import NoData from "./components/NoData/NoData";
 const fetchWeather = async (key) => {
   const city = key.queryKey[1];
   const res = await fetch(
@@ -44,6 +45,9 @@ function App() {
     <>
       <Header setCity={setCity} city={city}></Header>
       {status === "loading" && <Loading />}
+      {status === "success" && !data.name && city !== "" && (
+        <NoData data={city}></NoData>
+      )}
       {status === "success" && data.name && (
         <Weather city={city} datas={data}></Weather>
       )}

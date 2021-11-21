@@ -1,0 +1,21 @@
+.no-data {
+  width: 100%;
+  height: 15rem;
+  background-color: #eeeeeedd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  .icon {
+    width: 5rem;
+    filter: drop-shadow(0 0 1rem #555);
+  }
+  .message {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}

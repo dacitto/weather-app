@@ -11,8 +11,6 @@ const dtYoHour = (dt) =>
     .split(" ")[3];
 
 const WeatherCard = ({ city, day }) => {
-  console.log("city");
-  console.log(city);
   return (
     <div className="weather-card">
       <div className="day-time">

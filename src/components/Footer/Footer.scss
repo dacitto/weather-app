@@ -1,0 +1,32 @@
+footer {
+  position: absolute;
+  min-height: 5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    black 0%,
+    black 10%,
+    rgba(10, 10, 10, 0.787) 35%,
+    rgba(10, 10, 10, 0.05) 95%,
+    rgba(10, 10, 10, 0) 99%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color, #eee);
+
+  a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color, #eee);
+  }
+  .icon {
+    font-size: 2rem;
+  }
+}

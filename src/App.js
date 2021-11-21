@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Weather from "./components/Weather/Weather";
 import Loading from "./components/Loading";
+import Footer from "./components/Footer/Footer";
 const fetchWeather = async (key) => {
   const city = key.queryKey[1];
   const res = await fetch(
@@ -40,13 +41,14 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       <Header setCity={setCity} city={city}></Header>
       {status === "loading" && <Loading />}
       {status === "success" && data.name && (
         <Weather city={city} datas={data}></Weather>
       )}
-    </div>
+      <Footer></Footer>
+    </>
   );
 }
 

@@ -14,7 +14,8 @@ const CardsContainer = ({ data }) => {
   );
   const ArrayOfDays = [...setOfDays];
   return (
-    <div>
+    <section className="cards-container">
+      <h1 className="title">Hourly weather</h1>
       <ul className="list-of-days">
         {ArrayOfDays.map((day) => (
           <li
@@ -36,9 +37,13 @@ const CardsContainer = ({ data }) => {
               .split(" ")[0] === dayTime
         )
         .map((cityWeather) => (
-          <WeatherCard city={cityWeather} key={cityWeather.dt}></WeatherCard>
+          <WeatherCard
+            city={cityWeather}
+            key={cityWeather.dt}
+            day={dayTime}
+          ></WeatherCard>
         ))}
-    </div>
+    </section>
   );
 };
 

@@ -1,3 +1,13 @@
+.cards-container {
+  .title {
+    color: var(--text-color, #eee);
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-shadow: 0px 0px 15px #444;
+  }
+}
+
 .list-of-days {
   display: flex;
   width: fit-content;
@@ -9,16 +19,14 @@
   flex-wrap: wrap;
   .daytime {
     padding: 0.4rem 0.3rem;
-    border-radius: 5px;
     transition: 0.1s all ease-in-out;
     display: flex;
+    padding: 0.5rem;
     background: rgba(255, 255, 255, 0.75);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10.5px);
     -webkit-backdrop-filter: blur(10.5px);
     border-radius: 10px;
-
-    padding: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.18);
     &:hover {
       cursor: pointer;

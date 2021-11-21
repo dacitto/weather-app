@@ -12,7 +12,6 @@
     rgba(10, 10, 10, 0.05) 95%,
     rgba(10, 10, 10, 0) 99%
   );
-
   .title {
     text-transform: capitalize;
     text-align: center;
@@ -22,8 +21,24 @@
     font-family: "Pacifico", cursive;
     font-size: 3rem;
   }
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 0.6rem;
+  }
+  .btn {
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+
+    &:active {
+      color: var(--text-color);
+      background-color: #333;
+    }
+  }
   .search-bar {
-    background-color: white;
+    background-color: #ffffffcc;
     padding: 0.7rem 1rem;
     display: flex;
     border: none;
@@ -34,6 +49,7 @@
     }
 
     .search-input {
+      background-color: transparent;
       font-size: 1.5rem;
       border: none;
       width: 100%;

@@ -21,7 +21,7 @@ weatherly is a weather app made with
 
  `git clone https://github.com/dacitto/weather-app`
  
-2- open the file diractory and type the next command to install project dependencies:
+2- open the project diractory and type the next command to install project dependencies:
    
    - using npm `npm install` 
     

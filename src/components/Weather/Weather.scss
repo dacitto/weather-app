@@ -56,8 +56,13 @@
     justify-content: space-between;
     gap: 1rem;
     .status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+      flex-wrap: wrap;
       .icon {
-        width: 25px;
+        font-size: 1.5rem;
       }
       .text {
         font-weight: 300;

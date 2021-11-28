@@ -4,6 +4,8 @@ import { useQuery } from "react-query";
 import CardsContainer from "../CardsContainer/CardsContainer";
 import Map from "../Map/Map";
 import Loading from "../Loading";
+import { WiHumidity, WiStrongWind, WiThermometer } from "react-icons/wi";
+import { AiFillEye } from "react-icons/ai";
 
 const fetchWeathers = async (key) => {
   const city = key.queryKey[1];
@@ -43,14 +45,17 @@ const Weather = ({ datas }) => {
         </div>
         <div className="stat-row">
           <div className="status">
-            <span className="text">Humidity</span> {datas.main.humidity}%
+            <WiHumidity className="icon" />
+            <span className="text">humidity</span> {datas.main.humidity}%
           </div>
 
           <div className="status">
+            <WiStrongWind className="icon" />
             <span className="text">wind speed</span> {datas.wind.speed}km
           </div>
 
           <div className="status">
+            <AiFillEye className="icon" />
             <span className="text">visibility</span> {datas.visibility / 1000}km
           </div>
         </div>

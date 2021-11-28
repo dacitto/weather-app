@@ -3,7 +3,6 @@
   background-color: #ecececa4;
   padding-top: 1rem 0;
   padding-bottom: 3rem;
-
   background: linear-gradient(
     to bottom,
     black 0%,
@@ -31,8 +30,15 @@
     border-radius: 10px;
     border: none;
     font-size: 1rem;
-
-    &:active {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #333;
+    letter-spacing: 1px;
+    font-family: inherit;
+    &:hover,
+    &:focus {
+      transition: 0.2s all ease-in-out;
+      cursor: pointer;
       color: var(--text-color);
       background-color: #333;
     }

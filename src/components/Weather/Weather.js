@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import CardsContainer from "../CardsContainer/CardsContainer";
 import Map from "../Map/Map";
 import Loading from "../Loading";
-import { WiHumidity, WiStrongWind, WiThermometer } from "react-icons/wi";
+import { WiHumidity, WiStrongWind } from "react-icons/wi";
 import { AiFillEye } from "react-icons/ai";
 
 const fetchWeathers = async (key) => {
